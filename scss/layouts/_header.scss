@@ -1,0 +1,40 @@
+@use "../utils/variables" as vars;
+@use "../utils/mixin" as mix;
+
+.name_bar {
+  @include mix.flex-row(start, center, 1em);
+  background: vars.$primary-color;
+  height: 40px;
+  width: 100%;
+  padding: 0 1em;
+  position: sticky;
+  top: 0;
+  font-size: 12px;
+  border-bottom: 0.8px solid vars.$forty-color;
+  .back_img {
+    @include mix.flex-row(start, center, 0);
+    width: 30px;
+    height: 50px;
+  }
+
+  h1 {
+    @include mix.flex-row(center, center, 1em);
+    width: 85%;
+  }
+}
+
+// pc
+@media (min-width: 992px) {
+  .name_bar {
+    display: none;
+  }
+}
+
+// tablets
+@media (min-width: 768px) {
+  .name_bar {
+    display: none;
+  }
+}
+
+// phone

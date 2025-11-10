@@ -1,0 +1,163 @@
+@use "../utils/variables" as vars;
+@use "../utils/mixin" as mix;
+
+.hero {
+  @include mix.flex-column(start, center, 1em);
+  padding: 1em;
+  background: vars.$primary-color;
+  width: 100%;
+  height: auto;
+
+  .data {
+    @include mix.flex-column(start, start, 0.8em);
+    height: auto;
+    width: 100%;
+  }
+  .proof {
+    @include mix.flex-row(start, start, 1em);
+  }
+  .data.text {
+    @include mix.flex-row(start, start, 1em);
+    width: 100%;
+    padding: 1em;
+  }
+
+  .lexpin_user {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+  }
+  .ratings {
+    @include mix.flex-row(space-between, center, 1em);
+    text-decoration: none;
+
+    a {
+      gap: 1em;
+    }
+  }
+  .threads {
+    @include mix.flex-row(start, center, 1em);
+    text-decoration: none;
+    color: vars.$secondary-color;
+    font-weight: 500;
+  }
+  .buttoms_profile {
+    @include mix.flex-row(center, start, 1em);
+    height: auto;
+    padding: 1em;
+  }
+  .buttom_follow_message {
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    color: vars.$secondary-color;
+    background: vars.$forty-color;
+    border: none;
+    transition: 0.3s;
+  }
+  .buttom_follow_message:hover {
+    background-color: rgb(233, 228, 228);
+    color: vars.$secondary-color;
+    transition: 0.1s;
+  }
+  .buttom_follow_message_follow {
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    color: vars.$primary-color;
+    background-color: rgba(53, 105, 247, 0.904);
+    border: none;
+    transition: 0.3s;
+  }
+  .buttom_follow_message_follow:hover {
+    background-color: rgba(38, 87, 221, 0.904);
+    color: vars.$primary-color;
+    transition: 0.1s;
+  }
+
+  .buttom_img {
+    @include mix.flex-row(center, center, 1em);
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
+    color: vars.$secondary-color;
+    background: vars.$forty-color;
+    border: none;
+    transition: 0.3s;
+
+    .buttom_img:hover {
+      background-color: rgb(233, 228, 228);
+      color: vars.$primary-color;
+      transition: 0.1s;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .hero {
+    @include mix.flex-column(start, center, 0.8em);
+    width: 90%;
+    .lexpin_user {
+      height: 140px;
+      width: 140px;
+      border-radius: 50%;
+    }
+    .data {
+      @include mix.flex-column(center, center, 0.8em);
+    }
+    .proof {
+      @include mix.flex-row(flex-end, center, 1em);
+    }
+ p {
+  display: flex;
+ }
+    .buttoms_profile {
+      @include mix.flex-row(center, center, 1em);
+      width: 100%;
+      .buttom_follow_message_follow {
+        border-radius: 10px;
+        width: 220px;
+        height: 50px;
+      }
+      .buttom_follow_message {
+        border-radius: 10px;
+        width: 220px;
+        height: 50px;
+      }
+      .buttom_img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    @include mix.flex-column(center, start, 0.8em);
+    width: 90%;
+    .lexpin_user {
+      height: 140px;
+      width: 140px;
+      border-radius: 50%;
+    }
+    .proof {
+      @include mix.flex-row(center, center, 1em);
+    }
+  }
+  .buttoms_profile {
+    @include mix.flex-row(start, start, 1em);
+    .buttom_follow_message_follow {
+      border-radius: 10px;
+      width: 220px;
+      height: 50px;
+    }
+    .buttom_follow_message {
+      border-radius: 10px;
+      width: 220px;
+      height: 50px;
+    }
+    .buttom_img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

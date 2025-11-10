@@ -1,0 +1,37 @@
+@mixin flex-column($justify, $align, $gap) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+@mixin flex-row($justify, $align, $gap) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin grid($col, $row, $gap) {
+  display: grid;
+  grid-template-columns: repeat($col, 1fr);
+  grid-template-rows: repeat($row, 1fr);
+  gap: $gap;
+}
+
+@mixin flex-column-reverse($justify, $align, $gap){ 
+display: flex;
+flex-direction: column-reverse;
+justify-content: $justify;
+align-items: $align;
+gap: $gap;
+}
+
+@mixin flex-row-reverse($justify, $align, $gap){
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: $justify;
+align-items: $align;
+gap: $gap;
+}
+

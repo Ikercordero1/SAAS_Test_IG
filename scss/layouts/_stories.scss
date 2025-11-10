@@ -1,0 +1,99 @@
+@use "../utils/mixin" as mix;
+@use "../utils/variables" as vars;
+
+.stories {
+  @include mix.flex-row(start, flex-end, 0.5em);
+  width: 100%;
+  height: auto;
+  padding: 1em;
+  background: vars.$primary-color;
+
+  .stories_circles {
+    @include mix.flex-row(start, center, 1em);
+    width: 100%;
+    overflow-x: auto;
+
+    .stories_circles::-webkit-scrollbar {
+      display: none;
+    }
+
+    .circles {
+      @include mix.flex-column(center, center, 0.8em);
+      text-decoration: none;
+      color: vars.$secondary-color;
+      white-space: nowrap;
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .stories {
+    @include mix.flex-row(center, flex-end, 0.5em);
+    width: 100%;
+    height: auto;
+    padding: 1em;
+    background: vars.$primary-color;
+
+    .stories_circles {
+      @include mix.flex-row(start, center, 1em);
+      width: 60%;
+      overflow-x: auto;
+
+      .stories_circles::-webkit-scrollbar {
+        display: none;
+      }
+
+      .circles {
+        @include mix.flex-column(center, center, 0.8em);
+        text-decoration: none;
+        color: vars.$secondary-color;
+        white-space: nowrap;
+
+        img {
+          width: 65px;
+          height: 65px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .stories {
+    @include mix.flex-row(center, flex-end, 0.5em);
+    width: 100%;
+    height: auto;
+    padding: 1em;
+    background: vars.$primary-color;
+
+    .stories_circles {
+      @include mix.flex-row(start, center, 1em);
+      width: 60%;
+      overflow-x: auto;
+
+      .stories_circles::-webkit-scrollbar {
+        display: none;
+      }
+
+      .circles {
+        @include mix.flex-column(center, center, 0.8em);
+        text-decoration: none;
+        color: vars.$secondary-color;
+        white-space: nowrap;
+
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

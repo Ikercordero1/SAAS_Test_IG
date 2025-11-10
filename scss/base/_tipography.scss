@@ -1,0 +1,5 @@
+@use '../utils/variables' as vars;
+
+body {
+    font-style: vars.$font-stack;
+}

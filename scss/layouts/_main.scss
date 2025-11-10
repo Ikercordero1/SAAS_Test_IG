@@ -1,0 +1,13 @@
+@use "../utils/variables" as vars;
+@use "../utils/mixin" as mix;
+
+main {
+  @include mix.flex-row(center ,start, 1em);
+  width: 100%;
+  height: auto;
+  background: vars.$primary-color;
+  color: vars.$secondary-color;
+}
+
+ 
+
