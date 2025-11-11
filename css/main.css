@@ -38,12 +38,17 @@ body {
   width: 85%;
 }
 
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .name_bar {
     display: none;
   }
 }
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
+  .name_bar {
+    display: none;
+  }
+}
+@media only screen and (min-width: 468px) {
   .name_bar {
     display: none;
   }
@@ -59,6 +64,14 @@ main {
   color: rgb(15, 15, 15);
 }
 
+@media only screen and (max-width: 768px) {
+  main {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    gap: 1em;
+  }
+}
 .sidebar {
   display: flex;
   justify-content: start;
@@ -75,21 +88,21 @@ main {
   width: 80px;
   margin-left: 10px;
 }
-.sidebar .sb_img {
-  height: 30px;
-  width: 30px;
-}
 .sidebar .options_sidebar {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
+  align-items: center;
   gap: 1rem;
   width: 100%;
   font-size: 18px;
   white-space: nowrap;
 }
-.sidebar a {
+.sidebar .options_sidebar .sb_img {
+  height: 30px;
+  width: 30px;
+}
+.sidebar .options_sidebar a {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -102,12 +115,12 @@ main {
   border-radius: 10px;
   transition: 0.1s;
 }
-.sidebar a:hover {
+.sidebar .options_sidebar a:hover {
   background: rgba(228, 230, 227, 0.705);
   color: rgb(15, 15, 15);
   transition: 0.3s;
 }
-.sidebar .profile_img {
+.sidebar .options_sidebar .profile_img {
   height: 30px;
   width: 30px;
   border-radius: 50%;
@@ -131,20 +144,18 @@ main {
 }
 @media only screen and (max-width: 768px) {
   .sidebar {
-    width: 10%;
+    width: 15%;
     height: auto;
+    padding: 1em;
   }
-  p {
+  .sidebar p {
     display: none;
   }
-  a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-  }
-  .instagram_img {
+  .sidebar .instagram_img {
     display: none;
+  }
+  .sidebar .options_sidebar {
+    padding: 1em;
   }
 }
 @media only screen and (max-width: 468px) {
@@ -549,11 +560,6 @@ main {
   align-items: center;
   gap: 1em;
 }
-.sb_bottom .option_bottoms .prof_img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
 .sb_bottom .option_bottoms a {
   display: flex;
   justify-content: center;
@@ -567,13 +573,18 @@ main {
   border-radius: 10px;
   transition: 0.1s;
 }
-.sb_bottom .option_bottoms p {
-  display: none;
-}
-.sb_bottom .option_bottoms a:hover {
+.sb_bottom .option_bottoms a a:hover {
   background: rgba(228, 230, 227, 0.705);
   color: rgb(15, 15, 15);
   transition: 0.3s;
+}
+.sb_bottom .option_bottoms a p {
+  display: none;
+}
+.sb_bottom .option_bottoms a .prof_img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
 @media (min-width: 992px) {
@@ -582,6 +593,11 @@ main {
   }
 }
 @media (min-width: 768px) {
+  .sb_bottom {
+    display: none;
+  }
+}
+@media (min-width: 468px) {
   .sb_bottom {
     display: none;
   }

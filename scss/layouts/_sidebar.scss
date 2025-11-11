@@ -14,17 +14,18 @@
     width: 80px;
     margin-left: 10px;
   }
-  .sb_img {
-    height: 30px;
-    width: 30px;
-  }
+ 
 
   .options_sidebar {
-    @include mix.flex-column(center, left, 1rem);
+    @include mix.flex-column(center, center, 1rem);
     width: 100%;
 
     font-size: 18px;
     white-space: nowrap;
+  
+     .sb_img {
+    height: 30px;
+    width: 30px;
   }
 
   a {
@@ -49,6 +50,7 @@
     width: 30px;
     border-radius: 50%;
   }
+   }
 }
 // media queries
 
@@ -73,18 +75,21 @@
 // tablets
 @media only screen and (max-width: 768px){
   .sidebar {
-    width: 10%;
+  
+    width: 15%;
     height: auto;
-  }
-  p {
+    padding:1em;
+     p {
     display: none;
   }
-  a {
-    @include mix.flex-row(center, center, 0);
-  }
-  .instagram_img {
+  .instagram_img{
     display: none;
   }
+  .options_sidebar{
+    padding: 1em;
+  }
+  }
+ 
 }
 
 // phone

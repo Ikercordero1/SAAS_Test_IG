@@ -12,12 +12,7 @@
   .option_bottoms {
     @include mix.flex-row(start, center, 1em);
 
-    .prof_img {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-    }
-
+   
     a {
       @include mix.flex-row(center, center, .1em);
       text-decoration: none;
@@ -27,16 +22,26 @@
       height: 50px;
       border-radius: 10px;
       transition: 0.1s;
-    }
-    p{
-        display: none;
-    }
 
-    a:hover {
+      a:hover {
       background: vars.$forty-color;
       color: vars.$secondary-color;
       transition: 0.3s;
     }
+     p{
+        display: none;
+    }
+
+       .prof_img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    }
+   
+
+    
   }
 }
 @media (min-width: 992px) {
@@ -45,6 +50,12 @@
     }
 }
 @media (min-width: 768px) {
+    .sb_bottom{
+        display: none;
+    }
+}
+
+@media (min-width: 468px) {
     .sb_bottom{
         display: none;
     }

@@ -24,17 +24,22 @@
 }
 
 // pc
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) {
   .name_bar {
     display: none;
   }
 }
 
 // tablets
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .name_bar {
     display: none;
   }
 }
 
 // phone
+@media only screen and (min-width: 468px) {
+  .name_bar {
+    display: none;
+  }
+}
